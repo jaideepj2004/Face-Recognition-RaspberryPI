@@ -1,9 +1,9 @@
-cat > README.md << 'EOF'
-🧠 Face Recognition System on Raspberry Pi
+# 🧠 Face Recognition System on Raspberry Pi
 
 This project is a lightweight, real‑time face detection and recognition system built using OpenCV and deployed on a Raspberry Pi 4 Model B. It detects faces using Haar Cascades and recognizes them using the LBPH (Local Binary Patterns Histogram) algorithm.
 
-🚀 Features
+## 🚀 Features
+
 - Face detection using Haar Cascade
 - Face recognition using OpenCV's LBPH recognizer
 - Training script to register new users
@@ -12,15 +12,17 @@ This project is a lightweight, real‑time face detection and recognition system
 - Real-time recognition via USB camera
 - Works entirely offline on Raspberry Pi
 
-🧰 Requirements
+## 🧰 Requirements
+
 - Raspberry Pi 4 (or any model with decent performance)
 - USB webcam
 - Python 3.7+
-- OpenCV (\`opencv-contrib-python\`)
+- OpenCV (`opencv-contrib-python`)
 - VNC setup (optional for GUI access)
 
-📂 Project Structure
-\`\`\`plaintext
+## 📂 Project Structure
+
+```plaintext
 .
 ├── capture.py                      # Captures face images and stores them in folders
 ├── train2.py                       # Trains the LBPH model and saves it
@@ -32,35 +34,37 @@ This project is a lightweight, real‑time face detection and recognition system
     ├── Gautam/
     ├── Ankit/
     └── Priya/
-\`\`\`
+```
 
-📸 How to Use
+## 📸 How to Use
 
-1. **Capture Face Images**
-   \`\`\`bash
-   python3 capture.py
-   \`\`\`
-   Enter your name and let the system capture 30–50 images.
+### 1. Capture Face Images
+```bash
+python3 capture.py
+```
+Enter your name and let the system capture 30–50 images.
 
-2. **Train the Recognizer**
-   \`\`\`bash
-   python3 train2.py
-   \`\`\`
-   This creates \`trainer.yml\` and \`labels.pickle\`.
+### 2. Train the Recognizer
+```bash
+python3 train2.py
+```
+This creates `trainer.yml` and `labels.pickle`.
 
-3. **Run Face Recognition**
-   \`\`\`bash
-   python3 recog3.py
-   \`\`\`
-   It opens the camera feed and labels known faces in real-time.
+### 3. Run Face Recognition
+```bash
+python3 recog3.py
+```
+It opens the camera feed and labels known faces in real-time.
 
-📝 Notes
-- Place \`haarcascade_frontalface_default.xml\` in the same directory or provide a valid path.
+## 📝 Notes
+
+- Place `haarcascade_frontalface_default.xml` in the same directory or provide a valid path.
 - Ensure good lighting and proper camera alignment during image capture for better accuracy.
 - Unknown faces are labeled "Unknown" automatically if no match is found within a confidence threshold.
 
-📦 Installation (on Raspberry Pi)
-\`\`\`bash
+## 📦 Installation (on Raspberry Pi)
+
+```bash
 sudo apt update
 sudo apt install python3-opencv python3-pip
 pip3 install opencv-contrib-python --break-system-packages
@@ -69,11 +73,10 @@ pip3 install opencv-contrib-python --break-system-packages
 python3 -m venv venv
 source venv/bin/activate
 pip install opencv-contrib-python
-\`\`\`
+```
 
-📄 License  
+## 📄 License  
 This project is open-source and free to use under the MIT License.
 
-👤 Author  
+## 👤 Author  
 Jaideep Jaiswal
-EOF
